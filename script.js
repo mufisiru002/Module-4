@@ -71,8 +71,8 @@ window.onload = () => {
       names[i].charAt(0).toLowerCase() === 'j' ?
       byeSpeaker.speak(names[i]) : helloSpeaker.speak(names[i]);
         
-      names[i].charAt(0).toLowerCase() === 'j' ?
-      nameHold = names[i] : nameHold = names[i];
+      nameHold = (names[i].charAt(0).toLowerCase() === 'j') ?
+      `Good bye ${names[i]}` : `Hello ${names[i]}`;
       let p = document.createElement("p");
       p.innerHTML = nameHold;
       document.querySelector("body").appendChild(p);
