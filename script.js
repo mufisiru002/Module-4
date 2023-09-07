@@ -72,7 +72,7 @@ window.onload = () => {
       byeSpeaker.speak(names[i]) : helloSpeaker.speak(names[i]);
         
       names[i].charAt(0).toLowerCase() === 'j' ?
-      nameHold = byeSpeaker.speak(names[i]) : nameHold = helloSpeaker.speak(names[i]);
+      nameHold = names[i] : nameHold = names[i];
       let p = document.createElement("p");
       p.innerHTML = nameHold;
       document.querySelector("body").appendChild(p);
