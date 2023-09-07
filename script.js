@@ -65,10 +65,16 @@ WARNING!!! WARNING!!!
 (
   () => {
     var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+    let nameHold;
     for (let i = 0; i < names.length; i++) {
       names[i].charAt(0).toLowerCase() === 'j' ?
       byeSpeaker.speak(names[i]) : helloSpeaker.speak(names[i]);
-
+        
+      names[i].charAt(0).toLowerCase() === 'j' ?
+      nameHold = byeSpeaker.speak(names[i]) : nameHold = helloSpeaker.speak(names[i]);
+      let p = document.createElement("p");
+      p.innerHTML = nameHold;
+      document.querySelector("body").appendChild(p);
     }
   }
   )()
