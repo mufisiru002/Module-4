@@ -62,6 +62,7 @@ WARNING!!! WARNING!!!
 //     // helloSpeaker.xxxx
 //   }
 // }
+window.onload = () => {
 (
   () => {
     var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
@@ -77,7 +78,8 @@ WARNING!!! WARNING!!!
       document.querySelector("body").appendChild(p);
     }
   }
-  )()
+  )();
+}
   // STEP 11:
   // Retrieve the first letter of the current name in the loop.
   // Use the string object's 'charAt' function. Since we are looking for
